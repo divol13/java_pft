@@ -1,3 +1,5 @@
+package ru.divol13.pft.sandbox;
+
 public class Point {
 
     double x,y;
