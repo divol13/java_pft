@@ -1,4 +1,4 @@
-package ru.divol13.pft.addressbook;
+package ru.divol13.pft.addressbook.model;
 
 public class ContactData {
     private final String firstname;
