@@ -47,5 +47,6 @@ public class ContactHelper extends HelperBase {
 
     public void confirmDeleteContact() {
         wd.switchTo().alert().accept();
+        wd.findElement(By.cssSelector("div.msgbox"));
     }
 }
