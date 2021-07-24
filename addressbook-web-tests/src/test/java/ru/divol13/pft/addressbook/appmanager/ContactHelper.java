@@ -1,7 +1,6 @@
 package ru.divol13.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -58,5 +57,15 @@ public class ContactHelper extends HelperBase {
     public void confirmDeleteContact() {
         wd.switchTo().alert().accept();
         wd.findElement(By.cssSelector("div.msgbox"));
+    }
+
+    public void createContact(ContactData contact, boolean creation) {
+        initContactCreation();
+        fillContactForm(contact, creation);
+        returnToContactPage();
+    }
+
+    public boolean isThereAContact() {
+        return isElementPresent(By.name("selected[]"));
     }
 }
