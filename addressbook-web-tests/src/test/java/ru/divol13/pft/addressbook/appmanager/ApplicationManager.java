@@ -30,7 +30,7 @@ public class ApplicationManager  {
             wd = new FirefoxDriver();
         }
 
-        wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         sessionHelper = new SessionHelper(wd);
         groupHelper = new GroupHelper(wd);

@@ -16,14 +16,12 @@ public class DeleteGroupTests extends TestBase {
       app.getGroupHelper().createGroup(new GroupData("test1", "test2", "test3"));
     }
 
-    //int before = app.getGroupHelper().getGroupCount();
     List<GroupData> before = app.getGroupHelper().getGroupList();
 
     app.getGroupHelper().selectGroup(before.size() - 1);
     app.getGroupHelper().deleteSelectedGroup();
     app.getGroupHelper().returnToGroupPage();
 
-    //int after = app.getGroupHelper().getGroupCount();
     List<GroupData> after = app.getGroupHelper().getGroupList();
 
     Assert.assertEquals(before.size() - 1, after.size());
