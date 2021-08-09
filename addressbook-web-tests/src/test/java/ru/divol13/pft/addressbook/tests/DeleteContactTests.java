@@ -8,7 +8,7 @@ import java.util.List;
 
 public class DeleteContactTests extends TestBase{
 
-    @Test
+    @Test(enabled = false)
     public void testDeleteContact() throws InterruptedException {
         if(!app.getContactHelper().isThereAContact()){
             app.getContactHelper().createContact(new ContactData("Stepan", "Ostapovich", "Balakirev", "Lobnya", "no", "903*******", "test7"), true);

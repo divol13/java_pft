@@ -3,15 +3,12 @@ package ru.divol13.pft.addressbook.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.divol13.pft.addressbook.model.ContactData;
-import ru.divol13.pft.addressbook.model.GroupData;
-
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 
 public class ContactModificationTests extends TestBase {
 
-    @Test
+    @Test(enabled = false)
     public void testModificationContact(){
         if(!app.getContactHelper().isThereAContact()){
             ContactData newContact = new ContactData("Stepan", "Ostapovich", "Balakirev", "Lobnya", "no", "903*******", "test7");
@@ -21,7 +18,6 @@ public class ContactModificationTests extends TestBase {
 
         int contactForModify = before.size() - 1;
 
-        //app.getContactHelper().selectContact(contactForModify);
         app.getContactHelper().initContactModification(contactForModify);
 
         ContactData contact = new ContactData(before.get(contactForModify).getId(),"Ivan", "Ivanich", "Ivanov", "Moscow", "no", "916*******", null);
