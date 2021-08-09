@@ -1,13 +1,11 @@
 package ru.divol13.pft.addressbook.appmanager;
 
-import com.sun.xml.internal.bind.v2.bytecode.ClassTailor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.divol13.pft.addressbook.model.ContactData;
-import ru.divol13.pft.addressbook.model.GroupData;
 import ru.divol13.pft.addressbook.tests.HelperBase;
 
 import java.util.ArrayList;
@@ -44,8 +42,8 @@ public class ContactHelper extends HelperBase {
         click(By.linkText("home page"));
     }
 
-    public void initContactModification() {
-        click(By.xpath("//img[@alt='Edit']"));
+    public void initContactModification(int index) {
+        wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
     }
 
     public void submitContactModification() {
