@@ -5,12 +5,47 @@ import java.util.Objects;
 public class ContactData {
     private int id;
     private String firstname;
-    private final String middlename;
+    private String middlename;
     private String lastname;
-    private final String address;
-    private final String home;
-    private final String mobile;
-    private final String group;
+    private String address;
+    private String home;
+    private String mobile;
+    private String group;
+
+    public ContactData withFirstname(String firstname) {
+        this.firstname = firstname;
+        return this;
+    }
+
+    public ContactData withMiddlename(String middlename) {
+        this.middlename = middlename;
+        return this;
+    }
+
+    public ContactData withLastname(String lastname) {
+        this.lastname = lastname;
+        return this;
+    }
+
+    public ContactData withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
+    public ContactData withHome(String home) {
+        this.home = home;
+        return this;
+    }
+
+    public ContactData withMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+
+    public ContactData withGroup(String group) {
+        this.group = group;
+        return this;
+    }
 
     public ContactData(int id, String firstname, String middlename, String lastname, String address, String home, String mobile, String group) {
         this.id = id;
