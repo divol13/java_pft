@@ -6,9 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.divol13.pft.addressbook.model.ContactData;
+import ru.divol13.pft.addressbook.model.Contacts;
 import ru.divol13.pft.addressbook.tests.HelperBase;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class ContactHelper extends HelperBase {
@@ -63,20 +62,16 @@ public class ContactHelper extends HelperBase {
         wd.findElement(By.cssSelector("div.msgbox"));
     }
 
-    public void createContact(ContactData contact, boolean creation) {
+    public void create(ContactData contact, boolean creation) {
         initContactCreation();
         fillContactForm(contact, creation);
         returnToContactPage();
     }
 
-    public boolean isThereAContact() {
-        return isElementPresent(By.name("selected[]"));
-    }
-
-    public List<ContactData> getContactList() {
-        List<ContactData> contacts = new ArrayList<ContactData>();
+    public Contacts all() {
+        Contacts contacts = new Contacts();
         List<WebElement> elements = wd.findElements(By.name("entry"));
-        for (WebElement element : elements ) {
+        for (WebElement element : elements) {
             String lastName, firstName;
 
             List<WebElement> allInnerTd = element.findElements(By.tagName("td"));
@@ -85,9 +80,58 @@ public class ContactHelper extends HelperBase {
 
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("id"));
 
-            ContactData contact = new ContactData(id, firstName, null, lastName, null, null, null, null);
+            ContactData contact = new ContactData().withId(id).withFirstname(firstName).withLastname(lastName);
             contacts.add(contact);
         }
         return contacts;
+    }
+
+    public void delete(int index) throws InterruptedException {
+        selectContact(index);
+        deleteSelectedContact();
+        confirmDeleteContact();
+        Thread.sleep(500);
+    }
+
+    public void modify(int index, ContactData contact) {
+        initContactModification(index);
+        fillContactForm(contact, false);
+        clickUpdateContact();
+        returnToContactPage();
+    }
+
+    public void clickUpdateContact() {
+        click(By.name("update"));
+    }
+
+    public void selectContactById(int id) {
+        String selector = "input[value='" + id + "']";
+        wd.findElement(By.cssSelector(selector)).click();
+    }
+
+    public void delete(ContactData contact) throws InterruptedException {
+        selectContactById(contact.getId());
+        deleteSelectedContact();
+        confirmDeleteContact();
+        Thread.sleep(500);
+    }
+
+    public void modify(ContactData contact) {
+        modificationContact(contact.getId());
+        fillContactForm(contact, false);
+        clickUpdateContact();
+        returnToContactPage();
+    }
+
+    public void modificationContact(int id) {
+        String selector = "a[href='edit.php?id=" + id + "']";
+        wd.findElement(By.cssSelector(selector)).click();
+    }
+
+    public void gotoHomePage() {
+        if (isElementPresent(By.id("maintable"))) {
+            return;
+        }
+        click(By.linkText("home"));
     }
 }

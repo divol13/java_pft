@@ -1,35 +1,34 @@
 package ru.divol13.pft.addressbook.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import ru.divol13.pft.addressbook.model.GroupData;
+import ru.divol13.pft.addressbook.model.Groups;
 
-import java.util.List;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class GroupDeletionTests extends TestBase {
   @BeforeTest
   private void ensurePreconditions() {
     app.goTo().groupPage();
 
-    if(!app.group().isThereAGroup()){
+    if(app.group().all().size() == 0){
       GroupData group = new GroupData().withName("test1").withHeader("test2").withFooter("test3");
       app.group().create(group);
     }
   }
 
   @Test
-  public void testDeleteGroup() throws Exception {
-    List<GroupData> before = app.group().all();
+  public void testGroupDeletion() throws Exception {
+    Groups before = app.group().all();
+    GroupData deleteGroup = before.iterator().next();
 
-    int index = before.size() - 1;
-    app.group().delete(index);
+    app.group().delete(deleteGroup);
+    assertThat(app.group().all().size(), equalTo(before.size() - 1));
 
-    List<GroupData> after = app.group().all();
-    Assert.assertEquals(before.size() - 1, after.size());
-
-    before.remove(index);
-    Assert.assertEquals(before, after);
+    Groups after = app.group().all();
+    assertThat(after, equalTo(before.without(deleteGroup)));
   }
 
 }

@@ -12,6 +12,10 @@ public class ContactData {
     private String mobile;
     private String group;
 
+    public ContactData withId(int id) {
+        this.id = id;
+        return this;
+    }
     public ContactData withFirstname(String firstname) {
         this.firstname = firstname;
         return this;
@@ -47,29 +51,6 @@ public class ContactData {
         return this;
     }
 
-    public ContactData(int id, String firstname, String middlename, String lastname, String address, String home, String mobile, String group) {
-        this.id = id;
-        this.firstname = firstname;
-        this.middlename = middlename;
-        this.lastname = lastname;
-        this.address = address;
-        this.home = home;
-        this.mobile = mobile;
-        this.group = group;
-    }
-
-
-    public ContactData(String firstname, String middlename, String lastname, String address, String home, String mobile, String group) {
-        this.id = 0;
-        this.firstname = firstname;
-        this.middlename = middlename;
-        this.lastname = lastname;
-        this.address = address;
-        this.home = home;
-        this.mobile = mobile;
-        this.group = group;
-    }
-
     public String getFirstname() {
         return firstname;
     }
@@ -96,10 +77,6 @@ public class ContactData {
 
     public String getGroup() {
         return group;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getId() {

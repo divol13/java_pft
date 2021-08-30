@@ -1,50 +1,39 @@
 package ru.divol13.pft.addressbook.tests;
 
-import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.divol13.pft.addressbook.model.GroupData;
+import ru.divol13.pft.addressbook.model.Groups;
 
-import java.util.Comparator;
-import java.util.List;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class GroupModificationTests extends TestBase {
 
-    @BeforeTest
-    private void ensurePreconditions() {
+    @BeforeMethod
+    public void ensurePreconditions(){
         app.goTo().groupPage();
-
-        if(app.group().all().size() == 0){
+        if (app.group().all().size() == 0) {
             GroupData group = new GroupData().withName("test1").withHeader("test2").withFooter("test3");
             app.group().create(group);
         }
     }
 
     @Test
-    public void testGroupModification(){
-        List<GroupData> before = app.group().all();
-        int index = before.size() - 1;
+    public void testGroupModification() {
+        Groups before = app.group().all();
+        GroupData modifiedGroup = before.iterator().next();
+
         GroupData group = new GroupData().
-                withId(before.get(index).getId()).
+                withId(modifiedGroup.getId()).
                 withName("test7").
                 withHeader("test8").
                 withFooter("test9");
+        assertThat(app.group().all().size(), equalTo(before.size()));
 
-        app.group().modify(index, group);
-
-        List<GroupData> after = app.group().all();
-        Assert.assertEquals(before.size(), after.size());
-
-        before.remove(index);
-        before.add(group);
-
-        // new variant
-        Comparator<? super GroupData> ById = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
-        before.sort(ById);
-        after.sort(ById);
-        Assert.assertEquals(before, after);
-
-        // old variant
-        // Assert.assertEquals(new HashSet<>(before),new HashSet<>(after));
+        app.group().modify(group);
+        Groups after = app.group().all();
+        assertThat(after, equalTo(before.without(modifiedGroup).withAdded(group)));
     }
+
 }

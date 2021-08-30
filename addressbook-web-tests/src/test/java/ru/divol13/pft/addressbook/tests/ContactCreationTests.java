@@ -1,34 +1,38 @@
 package ru.divol13.pft.addressbook.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.divol13.pft.addressbook.model.ContactData;
+import ru.divol13.pft.addressbook.model.Contacts;
 import ru.divol13.pft.addressbook.model.GroupData;
 
 import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class ContactCreationTests extends TestBase {
 
-  @Test(enabled = false)
-  public void testContactCreation() throws Exception {
-    List<ContactData> before = app.getContactHelper().getContactList();
+  @Test
+  public void testContactCreation() {
+    app.contact().gotoHomePage();
+    Contacts before = app.contact().all();
+    ContactData contact = new ContactData().
+            withFirstname("Dmitry").
+            withMiddlename("Sergeevich").
+            withLastname("Volokitin").
+            withAddress("Moscow").
+            withHome("no").
+            withMobile("916*******").
+            withGroup("test7");
+    app.contact().create(contact, true);
 
-    app.getContactHelper().initContactCreation();
-    ContactData contact = new ContactData("Dmitry", "Sergeevich", "Volokitin", "Moscow", "no", "916*******", "test7");
-    app.getContactHelper().fillContactForm(contact, true );
-    app.getContactHelper().returnToContactPage();
-    List<ContactData> after = app.getContactHelper().getContactList();
-
-    Assert.assertEquals(before.size() + 1, after.size());
-
-    contact.setId(
-            after.stream().max(Comparator.comparingInt(ContactData::getId)).get().getId()
+    assertThat(app.contact().all().size(), equalTo(before.size() + 1));
+    Contacts after = app.contact().all();
+    assertThat(after,
+            equalTo( before.withAdded(
+                    contact.withId(after.stream().max(Comparator.comparingInt(ContactData::getId)).get().getId())
+            ))
     );
-
-    before.add(contact);
-    Assert.assertEquals(new HashSet<>(before),new HashSet<>(after));
   }
 
 }
