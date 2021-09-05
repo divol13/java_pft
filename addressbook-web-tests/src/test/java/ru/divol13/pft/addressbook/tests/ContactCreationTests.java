@@ -3,7 +3,6 @@ package ru.divol13.pft.addressbook.tests;
 import org.testng.annotations.*;
 import ru.divol13.pft.addressbook.model.ContactData;
 import ru.divol13.pft.addressbook.model.Contacts;
-import ru.divol13.pft.addressbook.model.GroupData;
 
 import java.util.Comparator;
 
@@ -21,8 +20,8 @@ public class ContactCreationTests extends TestBase {
             withMiddlename("Sergeevich").
             withLastname("Volokitin").
             withAddress("Moscow").
-            withHome("no").
-            withMobile("916*******").
+            withHomePhone("495-59-61").
+            withMobilePhone("8(916)268426").
             withGroup("test7");
     app.contact().create(contact, true);
 

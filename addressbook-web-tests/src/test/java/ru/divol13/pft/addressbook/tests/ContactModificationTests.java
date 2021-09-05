@@ -18,8 +18,8 @@ public class ContactModificationTests extends TestBase {
                     withMiddlename("Ostapovich").
                     withLastname("Balakirev").
                     withAddress("Lobnya").
-                    withHome("no").
-                    withMobile("903*******").
+                    withHomePhone("1564").
+                    withMobilePhone("903-905-64-82").
                     withGroup("test7");
 
             app.contact().create(contact, true);
@@ -36,8 +36,8 @@ public class ContactModificationTests extends TestBase {
                 withMiddlename("Ivanovich").
                 withLastname("Ivanov").
                 withAddress("Moscow").
-                withHome("yes").
-                withMobile("916*******");
+                withHomePhone("321-56").
+                withMobilePhone("916-159-95-19");
         app.contact().modify(contact);
         assertThat(app.contact().all().size(), equalTo(before.size()));
         Contacts after = app.contact().all();

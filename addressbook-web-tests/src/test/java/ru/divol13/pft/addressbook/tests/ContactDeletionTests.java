@@ -18,8 +18,8 @@ public class ContactDeletionTests extends TestBase{
                     withMiddlename("Ostapovich").
                     withLastname("Balakirev").
                     withAddress("Lobnya").
-                    withHome("no").
-                    withMobile("903*******").
+                    withHomePhone("123").
+                    withMobilePhone("903-123-59-67").
                     withGroup("test7");
 
             app.contact().create(contact, true);
