@@ -33,7 +33,9 @@ public class ContactData {
     @Expose
     private String work;
 
+    @Expose
     private String group;
+
     private String allphones;
     private String allemails;
     private String email;
