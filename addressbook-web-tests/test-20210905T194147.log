@@ -1,0 +1,746 @@
+19:41:47.774 185  [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+19:41:47.801 212  [main] DEBUG o.h.i.i.IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+19:41:47.804 215  [main] DEBUG o.h.i.i.IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+19:41:47.811 222  [main] DEBUG o.h.i.i.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+19:41:47.835 246  [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.7.Final
+19:41:47.838 249  [main] DEBUG org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+19:41:48.075 486  [main] DEBUG o.h.b.j.i.s.LocalXmlResourceResolver - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD 3.0//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+19:41:48.075 486  [main] DEBUG o.h.b.j.i.s.LocalXmlResourceResolver - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+19:41:48.079 490  [main] DEBUG o.h.b.c.internal.JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+19:41:48.338 749  [main] DEBUG o.h.service.spi.ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+19:41:48.364 775  [main] DEBUG o.h.c.i.RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+19:41:48.365 776  [main] DEBUG o.h.c.i.RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+19:41:48.390 801  [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+19:41:48.433 844  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@ca30bc1
+19:41:48.433 844  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@ca30bc1
+19:41:48.434 845  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@ca30bc1
+19:41:48.435 846  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@5505ae1a
+19:41:48.435 846  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@2bb3058
+19:41:48.436 847  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@5a2d131d
+19:41:48.437 848  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@1c93f6e1
+19:41:48.437 848  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@1c93f6e1
+19:41:48.437 848  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@1c93f6e1
+19:41:48.438 849  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@e383572
+19:41:48.439 850  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@e383572
+19:41:48.439 850  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@e383572
+19:41:48.440 851  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@a4add54
+19:41:48.440 851  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@a4add54
+19:41:48.440 851  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@a4add54
+19:41:48.441 852  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@61fe30
+19:41:48.441 852  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@61fe30
+19:41:48.441 852  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@61fe30
+19:41:48.443 854  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@7b420819
+19:41:48.443 854  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@7b420819
+19:41:48.443 854  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@7b420819
+19:41:48.444 855  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@4b41dd5c
+19:41:48.444 855  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@4b41dd5c
+19:41:48.444 855  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4b41dd5c
+19:41:48.445 856  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@56928307
+19:41:48.445 856  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@56928307
+19:41:48.446 857  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@56928307
+19:41:48.446 857  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@38089a5a
+19:41:48.447 858  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@38089a5a
+19:41:48.448 859  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@3cdf2c61
+19:41:48.448 859  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@3cdf2c61
+19:41:48.449 860  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@673be18f
+19:41:48.449 860  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@673be18f
+19:41:48.449 860  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@6ce86ce1
+19:41:48.450 861  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@77128536
+19:41:48.451 862  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@4c1f22f3
+19:41:48.451 862  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@4c1f22f3
+19:41:48.452 863  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@484094a5
+19:41:48.452 863  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@484094a5
+19:41:48.461 872  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@45312be2
+19:41:48.461 872  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@45312be2
+19:41:48.462 873  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@ab7395e
+19:41:48.462 873  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@ab7395e
+19:41:48.464 875  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@64a40280
+19:41:48.464 875  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@64a40280
+19:41:48.465 876  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@528c868
+19:41:48.466 877  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@528c868
+19:41:48.467 878  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@31c7528f
+19:41:48.467 878  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@31c7528f
+19:41:48.468 879  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@38aa816f
+19:41:48.468 879  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@38aa816f
+19:41:48.471 882  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@4426bff1
+19:41:48.471 882  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@4426bff1
+19:41:48.473 884  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@34158c08
+19:41:48.473 884  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@34158c08
+19:41:48.474 885  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@6dab9b6d
+19:41:48.475 886  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@6dab9b6d
+19:41:48.476 887  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@2e6a5539
+19:41:48.476 887  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@2e6a5539
+19:41:48.476 887  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@2e6a5539
+19:41:48.478 889  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@27d4a09
+19:41:48.479 890  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@72437d8d
+19:41:48.479 890  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@72437d8d
+19:41:48.479 890  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@72437d8d
+19:41:48.480 891  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@5a1de7fb
+19:41:48.481 892  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@6eb2384f
+19:41:48.482 893  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@12f9af83
+19:41:48.482 893  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@12f9af83
+19:41:48.483 894  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@10cf09e8
+19:41:48.483 894  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@10cf09e8
+19:41:48.484 895  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@6bca7e0d
+19:41:48.484 895  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@6bca7e0d
+19:41:48.485 896  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@19835e64
+19:41:48.485 896  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@19835e64
+19:41:48.486 897  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@33308786
+19:41:48.486 897  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@33308786
+19:41:48.486 897  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@5443d039
+19:41:48.487 898  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@22356acd
+19:41:48.488 899  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@22356acd
+19:41:48.488 899  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@22356acd
+19:41:48.489 900  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@7dda48d9
+19:41:48.489 900  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@7dda48d9
+19:41:48.489 900  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@7dda48d9
+19:41:48.490 901  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@5e4bd84a
+19:41:48.490 901  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@53de625d
+19:41:48.491 902  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@24111ef1
+19:41:48.491 902  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@24111ef1
+19:41:48.492 903  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@24111ef1
+19:41:48.493 904  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@16ce702d
+19:41:48.493 904  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@16ce702d
+19:41:48.493 904  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@16ce702d
+19:41:48.493 904  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@47f9738
+19:41:48.494 905  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@561868a0
+19:41:48.495 906  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@42bc14c1
+19:41:48.495 906  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@42bc14c1
+19:41:48.496 907  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@6436a7db
+19:41:48.498 909  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@40238dd0
+19:41:48.498 909  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@40238dd0
+19:41:48.499 910  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@4eb386df
+19:41:48.499 910  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4eb386df
+19:41:48.500 911  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@7ac0e420
+19:41:48.500 911  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@3da30852
+19:41:48.502 913  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@3568f9d2
+19:41:48.505 916  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@5a709816
+19:41:48.505 916  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@5a709816
+19:41:48.506 917  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@53dbe163
+19:41:48.506 917  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@db57326
+19:41:48.506 917  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@34a875b3
+19:41:48.506 917  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@4748a0f9
+19:41:48.506 917  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@4b14918a
+19:41:48.506 917  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@6d1ef78d
+19:41:48.506 917  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1a6c1270
+19:41:48.506 917  [main] DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@18a136ac
+19:41:48.566 977  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+19:41:48.567 978  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+19:41:48.568 979  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+19:41:48.568 979  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+19:41:48.568 979  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+19:41:48.570 981  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+19:41:48.570 981  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+19:41:48.572 983  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+19:41:48.573 984  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+19:41:48.573 984  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+19:41:48.574 985  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+19:41:48.574 985  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+19:41:48.574 985  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+19:41:48.575 986  [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+19:41:48.580 991  [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+19:41:48.588 999  [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/addressbook]
+19:41:48.588 999  [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {useUnicode=true, useLegacyDatetimeCode=false, user=root, password=, serverTimezone=UTC, useJDBCCompliantTimezoneShift=true}
+19:41:48.588 999  [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+19:41:48.593 1004 [main] DEBUG o.h.e.j.c.i.DriverManagerConnectionProviderImpl - Initializing Connection pool with 1 Connections
+19:41:48.593 1004 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+19:41:48.774 1185 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator - Database ->
+       name : MySQL
+    version : 5.5.5-10.4.20-MariaDB
+      major : 5
+      minor : 5
+19:41:48.774 1185 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator - Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.26 (Revision: 9aae1e450989d62c06616c1dcda3e404ef84df70)
+      major : 8
+      minor : 0
+19:41:48.774 1185 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator - JDBC version : 4.2
+19:41:48.788 1199 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+19:41:48.808 1219 [main] DEBUG o.h.e.j.e.s.IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in more than one case
+19:41:48.809 1220 [main] DEBUG o.h.e.j.e.s.IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [LOWER]; that will likely lead to problems in schema update and validation if using quoted identifiers
+19:41:48.829 1240 [main] DEBUG o.h.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+19:41:48.833 1244 [main] DEBUG o.h.t.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@34a75079] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@346a361]
+19:41:48.895 1306 [main] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ru.divol13.pft.addressbook.model.GroupData
+19:41:48.919 1330 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+19:41:48.927 1338 [main] DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name GroupData
+19:41:48.930 1341 [main] DEBUG o.h.cfg.annotations.EntityBinder - Bind entity ru.divol13.pft.addressbook.model.GroupData on table group_list
+19:41:48.954 1365 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(group_list), mappingColumn=group_id, insertable=true, updatable=true, unique=false}
+19:41:48.958 1369 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - Not known whether passed class name [ru.divol13.pft.addressbook.model.GroupData] is safe
+19:41:48.958 1369 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ru.divol13.pft.addressbook.model.GroupData
+19:41:48.959 1370 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+19:41:48.961 1372 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.GroupData:id]
+19:41:48.963 1374 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for id
+19:41:48.965 1376 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property id
+19:41:48.968 1379 [main] DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(group_id)]), id, assigned, , ...)
+19:41:48.968 1379 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(group_list), mappingColumn=group_footer, insertable=true, updatable=true, unique=false}
+19:41:48.969 1380 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property footer with lazy=false
+19:41:48.969 1380 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.GroupData:footer]
+19:41:48.969 1380 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for footer
+19:41:48.969 1380 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property footer
+19:41:48.970 1381 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(group_list), mappingColumn=group_header, insertable=true, updatable=true, unique=false}
+19:41:48.970 1381 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property header with lazy=false
+19:41:48.970 1381 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.GroupData:header]
+19:41:48.970 1381 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for header
+19:41:48.970 1381 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property header
+19:41:48.970 1381 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(group_list), mappingColumn=group_name, insertable=true, updatable=true, unique=false}
+19:41:48.970 1381 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property name with lazy=false
+19:41:48.970 1381 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.GroupData:name]
+19:41:48.970 1381 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for name
+19:41:48.970 1381 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property name
+19:41:48.972 1383 [main] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ru.divol13.pft.addressbook.model.ContactData
+19:41:48.972 1383 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+19:41:48.973 1384 [main] DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name ContactData
+19:41:48.973 1384 [main] DEBUG o.h.cfg.annotations.EntityBinder - Bind entity ru.divol13.pft.addressbook.model.ContactData on table addressbook
+19:41:48.975 1386 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=id, insertable=true, updatable=true, unique=false}
+19:41:48.975 1386 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - Not known whether passed class name [ru.divol13.pft.addressbook.model.ContactData] is safe
+19:41:48.975 1386 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ru.divol13.pft.addressbook.model.ContactData
+19:41:48.975 1386 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+19:41:48.975 1386 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.ContactData:id]
+19:41:48.975 1386 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for id
+19:41:48.975 1386 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property id
+19:41:48.976 1387 [main] DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, assigned, , ...)
+19:41:48.977 1388 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=address, insertable=true, updatable=true, unique=false}
+19:41:48.977 1388 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property address with lazy=false
+19:41:48.978 1389 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.ContactData:address]
+19:41:48.978 1389 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for address
+19:41:48.978 1389 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property address
+19:41:48.978 1389 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=email, insertable=true, updatable=true, unique=false}
+19:41:48.978 1389 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property email with lazy=false
+19:41:48.978 1389 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.ContactData:email]
+19:41:48.979 1390 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for email
+19:41:48.979 1390 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property email
+19:41:48.979 1390 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=email2, insertable=true, updatable=true, unique=false}
+19:41:48.979 1390 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property email2 with lazy=false
+19:41:48.979 1390 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.ContactData:email2]
+19:41:48.979 1390 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for email2
+19:41:48.979 1390 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property email2
+19:41:48.979 1390 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=email3, insertable=true, updatable=true, unique=false}
+19:41:48.979 1390 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property email3 with lazy=false
+19:41:48.979 1390 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.ContactData:email3]
+19:41:48.979 1390 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for email3
+19:41:48.980 1391 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property email3
+19:41:48.980 1391 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=firstname, insertable=true, updatable=true, unique=false}
+19:41:48.980 1391 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property firstname with lazy=false
+19:41:48.980 1391 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.ContactData:firstname]
+19:41:48.980 1391 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for firstname
+19:41:48.980 1391 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property firstname
+19:41:48.980 1391 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=home, insertable=true, updatable=true, unique=false}
+19:41:48.980 1391 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property home with lazy=false
+19:41:48.980 1391 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.ContactData:home]
+19:41:48.980 1391 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for home
+19:41:48.981 1392 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property home
+19:41:48.981 1392 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=lastname, insertable=true, updatable=true, unique=false}
+19:41:48.981 1392 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property lastname with lazy=false
+19:41:48.981 1392 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.ContactData:lastname]
+19:41:48.981 1392 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for lastname
+19:41:48.981 1392 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property lastname
+19:41:48.981 1392 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=middlename, insertable=true, updatable=true, unique=false}
+19:41:48.981 1392 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property middlename with lazy=false
+19:41:48.981 1392 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.ContactData:middlename]
+19:41:48.981 1392 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for middlename
+19:41:48.981 1392 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property middlename
+19:41:48.982 1393 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=mobile, insertable=true, updatable=true, unique=false}
+19:41:48.982 1393 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property mobile with lazy=false
+19:41:48.982 1393 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.ContactData:mobile]
+19:41:48.982 1393 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for mobile
+19:41:48.982 1393 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property mobile
+19:41:48.982 1393 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=photo, insertable=true, updatable=true, unique=false}
+19:41:48.982 1393 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property photo with lazy=false
+19:41:48.982 1393 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.ContactData:photo]
+19:41:48.982 1393 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for photo
+19:41:48.982 1393 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property photo
+19:41:48.982 1393 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=work, insertable=true, updatable=true, unique=false}
+19:41:48.983 1394 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property work with lazy=false
+19:41:48.983 1394 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.divol13.pft.addressbook.model.ContactData:work]
+19:41:48.983 1394 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for work
+19:41:48.983 1394 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property work
+19:41:48.984 1395 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+19:41:48.984 1395 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for footer
+19:41:48.984 1395 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for header
+19:41:48.984 1395 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for name
+19:41:48.984 1395 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+19:41:48.984 1395 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for address
+19:41:48.984 1395 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for email
+19:41:48.984 1395 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for email2
+19:41:48.985 1396 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for email3
+19:41:48.985 1396 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for firstname
+19:41:48.985 1396 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for home
+19:41:48.985 1396 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for lastname
+19:41:48.985 1396 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for middlename
+19:41:48.985 1396 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for mobile
+19:41:48.985 1396 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for photo
+19:41:48.985 1396 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for work
+19:41:48.987 1398 [main] DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [group_id] to be non-null as it is part of the primary key for table [group_list]
+19:41:48.987 1398 [main] DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [addressbook]
+19:41:49.029 1440 [main] DEBUG o.h.internal.SessionFactoryImpl - Building session factory
+19:41:49.030 1441 [main] DEBUG org.hibernate.cfg.Settings - SessionFactory name : null
+19:41:49.030 1441 [main] DEBUG org.hibernate.cfg.Settings - Automatic flush during beforeCompletion(): enabled
+19:41:49.030 1441 [main] DEBUG org.hibernate.cfg.Settings - Automatic session close at end of transaction: disabled
+19:41:49.030 1441 [main] DEBUG org.hibernate.cfg.Settings - Statistics: disabled
+19:41:49.030 1441 [main] DEBUG org.hibernate.cfg.Settings - Deleted entity synthetic identifier rollback: disabled
+19:41:49.030 1441 [main] DEBUG org.hibernate.cfg.Settings - Default entity-mode: pojo
+19:41:49.030 1441 [main] DEBUG org.hibernate.cfg.Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+19:41:49.030 1441 [main] DEBUG org.hibernate.cfg.Settings - Allow initialization of lazy state outside session : disabled
+19:41:49.030 1441 [main] DEBUG org.hibernate.cfg.Settings - Using BatchFetchStyle : LEGACY
+19:41:49.030 1441 [main] DEBUG org.hibernate.cfg.Settings - Default batch fetch size: -1
+19:41:49.030 1441 [main] DEBUG org.hibernate.cfg.Settings - Maximum outer join fetch depth: 2
+19:41:49.030 1441 [main] DEBUG org.hibernate.cfg.Settings - Default null ordering: NONE
+19:41:49.031 1442 [main] DEBUG org.hibernate.cfg.Settings - Order SQL updates by primary key: disabled
+19:41:49.031 1442 [main] DEBUG org.hibernate.cfg.Settings - Order SQL inserts for batching: disabled
+19:41:49.031 1442 [main] DEBUG org.hibernate.cfg.Settings - multi-tenancy strategy : NONE
+19:41:49.031 1442 [main] DEBUG org.hibernate.cfg.Settings - JTA Track by Thread: enabled
+19:41:49.031 1442 [main] DEBUG org.hibernate.cfg.Settings - Query language substitutions: {}
+19:41:49.031 1442 [main] DEBUG org.hibernate.cfg.Settings - Named query checking : enabled
+19:41:49.031 1442 [main] DEBUG org.hibernate.cfg.Settings - Second-level cache: disabled
+19:41:49.031 1442 [main] DEBUG org.hibernate.cfg.Settings - Second-level query cache: disabled
+19:41:49.031 1442 [main] DEBUG org.hibernate.cfg.Settings - Second-level query cache factory: null
+19:41:49.031 1442 [main] DEBUG org.hibernate.cfg.Settings - Second-level cache region prefix: null
+19:41:49.031 1442 [main] DEBUG org.hibernate.cfg.Settings - Optimize second-level cache for minimal puts: disabled
+19:41:49.031 1442 [main] DEBUG org.hibernate.cfg.Settings - Structured second-level cache entries: disabled
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - Second-level cache direct-reference entries: disabled
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - Automatic eviction of collection cache: disabled
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - JDBC batch size: 15
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - JDBC batch updates for versioned data: enabled
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - Scrollable result sets: enabled
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - Wrap result sets: disabled
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - JDBC3 getGeneratedKeys(): enabled
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - JDBC result set fetch size: null
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - Connection release mode: AFTER_TRANSACTION
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - Generate SQL with comments: disabled
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - JPA compliance - query : disabled
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - JPA compliance - closed-handling : disabled
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - JPA compliance - lists : disabled
+19:41:49.032 1443 [main] DEBUG org.hibernate.cfg.Settings - JPA compliance - transactions : disabled
+19:41:49.106 1517 [main] DEBUG o.h.s.i.SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+19:41:49.106 1517 [main] DEBUG o.h.s.i.SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+19:41:49.125 1536 [main] DEBUG o.h.internal.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+19:41:49.125 1536 [main] DEBUG o.h.internal.SessionFactoryImpl - Instantiating session factory with properties: {sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, dialect=org.hibernate.dialect.MySQLDialect, file.encoding.pkg=sun.io, java.specification.version=1.8, hibernate.connection.serverTimezone=UTC, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, hibernate.dialect=org.hibernate.dialect.MySQLDialect, java.class.path=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.1\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.1\plugins\testng\lib\testng-rt.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\charsets.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext\access-bridge-64.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext\cldrdata.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext\dnsns.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext\jaccess.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext\jfxrt.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext\localedata.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext\nashorn.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext\sunec.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext\sunjce_provider.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext\sunmscapi.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext\sunpkcs11.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext\zipfs.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\jce.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\jfr.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\jfxswt.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\jsse.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\management-agent.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\resources.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\rt.jar;C:\Projects\java_pft\addressbook-web-tests\out\test\classes;C:\Projects\java_pft\addressbook-web-tests\out\test\resources;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-java\4.0.0-beta-4\fd6b0bc92d6801e8ec48d98133d68d769b15ac27\selenium-java-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.testng\testng\7.4.0\b6becc0a058e272473ac3ba983966ff507ca0300\testng-7.4.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.beust\jcommander\1.81\9ca9dd27bb28e5990ad01aec5bb2989f50b6ff3e\jcommander-1.81.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.8\431fc3cbc0ff81abdbfde070062741089c3ba874\gson-2.8.8.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.thoughtworks.xstream\xstream\1.4.18\12eb80b4c4b83b184b669866f510a0eae13f9475\xstream-1.4.18.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\mysql\mysql-connector-java\8.0.26\e5ec6610020a3084b7d32ee725d1650176f6b3de\mysql-connector-java-8.0.26.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-core\5.5.7.Final\c2eedbe31f82c25f8671c94f2b2419af5804fc7e\hibernate-core-5.5.7.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-all\1.3\63a21ebc981131004ad02e0434e799fd7f3a8d5a\hamcrest-all-1.3.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-classic\1.2.5\30e0c3932f24fb10e7851dd308a3ad14e570d60\logback-classic-1.2.5.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-chrome-driver\4.0.0-beta-4\c7065136dcc3e7a2bc58e5decfd652a23b37f96\selenium-chrome-driver-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-edge-driver\4.0.0-beta-4\a49c4537286e7bb02b807f3e4892fd9641c5d3d4\selenium-edge-driver-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-firefox-xpi-driver\4.0.0-beta-4\b4f7d355fa3ca462802683ebb39c205b769ddd8e\selenium-firefox-xpi-driver-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-firefox-driver\4.0.0-beta-4\aa447f9fa815088cac2b6d2ebc7e86aad987757c\selenium-firefox-driver-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-ie-driver\4.0.0-beta-4\884af036699f0b00228414a6efe01d705aaf2210\selenium-ie-driver-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-opera-driver\4.0.0-beta-4\4bff4bcf493b3923f7e776bbef4116673ed766be\selenium-opera-driver-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-safari-driver\4.0.0-beta-4\bcb1a2197688c81635475e1ceb4a05c531ffdd9d\selenium-safari-driver-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-support\4.0.0-beta-4\f33e9916483f75f237f085af935ad7cd0707d613\selenium-support-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-devtools-v85\4.0.0-beta-4\4934c98c2c6647f5e6679c5f1dc1516dd004658d\selenium-devtools-v85-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-devtools-v88\4.0.0-beta-4\d573aa7b21ae8afaa1d332223e556e5f1bfed9bb\selenium-devtools-v88-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-devtools-v89\4.0.0-beta-4\af4ef6595dd63436a36a430a5135fdfae7640ba6\selenium-devtools-v89-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-devtools-v90\4.0.0-beta-4\a7ec1fbce9b46a1c74c429107422a12c8a854a13\selenium-devtools-v90-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-devtools-v91\4.0.0-beta-4\74e1e8baa4f85723ad8ce41f5fd79c0a9cbbb723\selenium-devtools-v91-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-remote-driver\4.0.0-beta-4\dcf08610a7e689d16da64c7e7372e687eb5c5b32\selenium-remote-driver-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-api\4.0.0-beta-4\b8cd0579e1f196b8f5b79f6a41dd7c8b11abbd21\selenium-api-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.webjars\jquery\3.5.1\2392938e374f561c27c53872bdc9b6b351b6ba34\jquery-3.5.1.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.github.x-stream\mxparser\1.2.2\476fb3b3bb3716cad797cd054ce45f89445794e9\mxparser-1.2.2.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.google.protobuf\protobuf-java\3.11.4\7ec0925cc3aef0335bbc7d57edfd42b0f86f8267\protobuf-java-3.11.4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.hibernate.common\hibernate-commons-annotations\5.1.2.Final\e59ffdbc6ad09eeb33507b39ffcf287679a498c8\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.jboss.logging\jboss-logging\3.4.2.Final\e517b8a93dd9962ed5481345e4d262fdd47c4217\jboss-logging-3.4.2.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\javax.persistence\javax.persistence-api\2.2\25665ac8c0b62f50e6488173233239120fc52c96\javax.persistence-api-2.2.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.javassist\javassist\3.27.0-GA\f63e6aa899e15eca8fdaa402a79af4c417252213\javassist-3.27.0-GA.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy\1.11.12\a87ac6292b08d12baecc5fc1d503389ff55c8884\byte-buddy-1.11.12.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\antlr\antlr\2.7.7\83cd2cd674a217ade95a4bb83a8a14f351f48bd0\antlr-2.7.7.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.jboss.spec.javax.transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\a8485cab9484dda36e9a8c319e76b5cc18797b58\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.jboss\jandex\2.2.3.Final\d3865101f0666b63586683bd811d754517f331ab\jandex-2.2.3.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.fasterxml\classmate\1.5.1\3fe0bed568c62df5e89f4f174c101eab25345b6c\classmate-1.5.1.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.1\dd6dda9da676a54c5b36ca2806ff95ee017d8738\jaxb-runtime-2.3.1.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\javax.xml.bind\jaxb-api\2.3.1\8531ad5ac454cc2deb9d4d32c40c4d7451939b5d\jaxb-api-2.3.1.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\javax.activation\javax.activation-api\1.2.0\85262acf3ca9816f9537ca47d5adeabaead7cb16\javax.activation-api-1.2.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-core\1.2.5\3e149d9c476be313030faf12d76a82c8a0e97f04\logback-core-1.2.5.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.31\9545c9cb71de4c18d97a91e32ef0be6f3f6661b7\slf4j-api-1.7.31.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-chromium-driver\4.0.0-beta-4\dd254cee5e782fc002efc01ee922bb0d25e802f1\selenium-chromium-driver-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-devtools\4.0.0-beta-4\f6a4ecf6c733782616a8225a53c34a25eeb82753\selenium-devtools-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-http\4.0.0-beta-4\6eea5a353f3fd6dbff2ac566072286224fbfaf97\selenium-http-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-json\4.0.0-beta-4\dd8fd2378153bd6ac55cc5c14ae0f9e2de3ad49f\selenium-json-4.0.0-beta-4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.google.auto.service\auto-service\1.0\badf27cfb4fb2e7cd2579a95b00ef578cc5491fa\auto-service-1.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.google.auto.service\auto-service-annotations\1.0\c628bf87e8b708c707aa523033d90fb0eb2d6495\auto-service-annotations-1.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\30.1.1-jre\87e0fd1df874ea3cbe577702fe6f17068b790fd8\guava-30.1.1-jre.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.asynchttpclient\async-http-client\2.12.3\6dfc91814cc8b3bc3327246d0e5df36911b9a623\async-http-client-2.12.3.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-http\4.1.63.Final\f8c9b159dcb76452dc98a370a5511ff993670419\netty-codec-http-4.1.63.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-epoll\4.1.63.Final\65bdb6c40a76ef9c4269518614a1c4ef51051484\netty-transport-native-epoll-4.1.63.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-epoll\4.1.63.Final\98d898362dd9a00eb23e2857a49cb15ff37353dc\netty-transport-native-epoll-4.1.63.Final-linux-x86_64.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-kqueue\4.1.63.Final\e191f7cd212e679e9a97f4908dceafcff999db3b\netty-transport-native-kqueue-4.1.63.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-kqueue\4.1.63.Final\42657e570383dc560eb5f65ab3f8975ebbf8fe03\netty-transport-native-kqueue-4.1.63.Final-osx-x86_64.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-unix-common\4.1.63.Final\85bd91382ec54b300ad3ff59efccbb4fccb22a88\netty-transport-native-unix-common-4.1.63.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport\4.1.63.Final\9a8bbe1ba082c9434e6f524d3864a53f340f2df\netty-transport-4.1.63.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-buffer\4.1.63.Final\40028ce5ac7c43f1c9a1439f74637cad04013e23\netty-buffer-4.1.63.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-common\4.1.63.Final\e1206b46384d4dcbecee2901f18ce65ecf02e8a4\netty-common-4.1.63.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-exporter-logging\1.2.0\e584864a34165cad77961e8b6d29a5331f588ebd\opentelemetry-exporter-logging-1.2.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.2.0-alpha\b6f543db24776b9c2f0c3c69f13fcd1fed8ba151\opentelemetry-sdk-extension-autoconfigure-1.2.0-alpha.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-sdk\1.2.0\d6dbda1293f717033a8d512607f048c956f03d52\opentelemetry-sdk-1.2.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-sdk-trace\1.2.0\2a1881ee7596602a3bd3962b1815eb09339feb6f\opentelemetry-sdk-trace-1.2.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-sdk-common\1.2.0\e930c5077c65047a279a5fce3362618ef814b931\opentelemetry-sdk-common-1.2.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-semconv\1.2.0-alpha\3213e32cd4897feee5f3f7d4430e815162a1ca2f\opentelemetry-semconv-1.2.0-alpha.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-api\1.2.0\896e4544e94563d6fa63f5e567503f2829800830\opentelemetry-api-1.2.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-context\1.2.0\ef09bd01af659cfc50e785cfc57f8c14ecb8857b\opentelemetry-context-1.2.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.ous\jtoml\2.0.0\2085505b2b173e14b2a7702edd703ce185fd6206\jtoml-2.0.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-exec\1.3\8dfb9facd0830a27b1b5f29f84593f0aeee7773b\commons-exec-1.3.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\xmlpull\xmlpull\1.1.3.1\2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa\xmlpull-1.1.3.1.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\txw2\2.3.1\a09d2c48d3285f206fafbffe0e50619284e92126\txw2-2.3.1.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.sun.istack\istack-commons-runtime\3.0.7\c197c86ceec7318b1284bffb49b54226ca774003\istack-commons-runtime-3.0.7.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.jvnet.staxex\stax-ex\1.8\8cc35f73da321c29973191f2cf143d29d26a1df7\stax-ex-1.8.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.sun.xml.fastinfoset\FastInfoset\1.2.15\bb7b7ec0379982b97c62cd17465cb6d9155f68e8\FastInfoset-1.2.15.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.google.auto\auto-common\1.0\41d5dbfadf17625071d3f4a8b7f7a6d70dcd3c8f\auto-common-1.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.google.guava\failureaccess\1.0.1\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\failureaccess-1.0.1.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-qual\3.8.0\6b83e4a33220272c3a08991498ba9dc09519f190\checker-qual-3.8.0.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.5.1\562d366678b89ce5d6b6b82c1a073880341e3fba\error_prone_annotations-2.5.1.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.google.j2objc\j2objc-annotations\1.3\ba035118bc8bac37d7eff77700720999acd9986d\j2objc-annotations-1.3.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.asynchttpclient\async-http-client-netty-utils\2.12.3\ad99d8622931ed31367d0fef7fa17eb62e033fb3\async-http-client-netty-utils-2.12.3.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-handler-proxy\4.1.60.Final\2352f12826400e5db64b36fd951508ce9a61c196\netty-handler-proxy-4.1.60.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.typesafe.netty\netty-reactive-streams\2.0.4\f77c8eaa7d5e2f2160b6d21ba385cf726f164b2\netty-reactive-streams-2.0.4.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-handler\4.1.63.Final\879a43c2325b08e92e8967218b6ddb0ed4b7a0d3\netty-handler-4.1.63.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-socks\4.1.60.Final\6f4573281df659265bd709fd10471c3e00ef6c70\netty-codec-socks-4.1.60.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\org.reactivestreams\reactive-streams\1.0.3\d9fb7a7926ffa635b3dcaa5049fb2bfa25b3e7d0\reactive-streams-1.0.3.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\com.sun.activation\jakarta.activation\1.2.2\74548703f9851017ce2f556066659438019e7eb5\jakarta.activation-1.2.2.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec\4.1.63.Final\d4d2fccea88c80e56d59ce1053c53df0f9f4f5db\netty-codec-4.1.63.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.netty\netty-resolver\4.1.63.Final\d07cd47c101dfa655d6d5cc304d523742fd78ca8\netty-resolver-4.1.63.Final.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-sdk-metrics\1.2.0-alpha\18352f406afc373ef6315ab25f13a8fc904e742c\opentelemetry-sdk-metrics-1.2.0-alpha.jar;C:\Users\divol13\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-api-metrics\1.2.0-alpha\51be762d558b425697091a5e7ac5e65c3cf084de\opentelemetry-api-metrics-1.2.0-alpha.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.1\lib\idea_rt.jar, java.vm.vendor=Amazon.com Inc., sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, hbm2ddl.auto=validate, user.variant=, java.vendor.url=https://aws.amazon.com/corretto/, user.timezone=Europe/Moscow, user.country.format=RU, os.name=Windows 10, java.vm.specification.version=1.8, sun.java.launcher=SUN_STANDARD, user.country=US, sun.boot.library.path=C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\bin, sun.java.command=com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -socket4617 @w@C:\Users\divol13\AppData\Local\Temp\idea_working_dirs_testng.tmp -temp C:\Users\divol13\AppData\Local\Temp\idea_testng.tmp, sun.cpu.endian=little, user.home=C:\Users\divol13, user.language=en, java.specification.vendor=Oracle Corporation, hibernate.cache.provider_class=org.hibernate.cache.internal.NoCachingRegionFactory, connection.serverTimezone=UTC, java.home=C:\Users\divol13\.jdks\corretto-1.8.0_302\jre, file.separator=\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, cache.provider_class=org.hibernate.cache.internal.NoCachingRegionFactory, sun.boot.class.path=C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\resources.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\rt.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\sunrsasign.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\jsse.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\jce.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\charsets.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\jfr.jar;C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\classes, hibernate.hbm2ddl.auto=validate, user.script=, connection.password=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, hibernate.connection.useUnicode=true, java.runtime.version=1.8.0_302-b08, user.name=divol13, path.separator=;, hibernate.connection.username=****, os.version=10.0, java.endorsed.dirs=C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\endorsed, hibernate.connection.useLegacyDatetimeCode=false, java.runtime.name=OpenJDK Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/addressbook, connection.pool_size=1, file.encoding=UTF-8, hibernate.connection.useJDBCCompliantTimezoneShift=true, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, show_sql=true, hibernate.connection.driver_class=com.mysql.cj.jdbc.Driver, java.vendor.url.bug=https://github.com/corretto/corretto-8/issues/, java.io.tmpdir=C:\Users\divol13\AppData\Local\Temp\, java.version=1.8.0_302, user.dir=C:\Projects\java_pft\addressbook-web-tests, connection.useLegacyDatetimeCode=false, os.arch=amd64, connection.username=root, java.vm.specification.name=Java Virtual Machine Specification, user.language.format=ru, hibernate.connection.password=****, java.awt.printerjob=sun.awt.windows.WPrinterJob, connection.useJDBCCompliantTimezoneShift=true, connection.useUnicode=true, sun.os.patch.level=, connection.driver_class=com.mysql.cj.jdbc.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@7cf7aee, java.library.path=C:\Users\divol13\.jdks\corretto-1.8.0_302\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\PortableGit\bin;%JAVA_HOME%\bin;C:\Users\divol13\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.1\bin;;C:\Users\divol13\AppData\Local\GitHubDesktop\bin;., java.vendor=Amazon.com Inc., java.vm.info=mixed mode, java.vm.version=25.302-b08, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, java.ext.dirs=C:\Users\divol13\.jdks\corretto-1.8.0_302\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, hibernate.connection.pool_size=1, connection.url=jdbc:mysql://localhost:3306/addressbook, java.class.version=52.0}
+19:41:49.140 1551 [main] DEBUG o.h.secure.spi.JaccIntegrator - Skipping JACC integration as it was not enabled
+19:41:49.141 1552 [main] DEBUG o.h.internal.SessionFactoryImpl - Instantiated session factory
+19:41:49.142 1553 [main] DEBUG o.h.t.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@34a75079] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@867ba60]
+19:41:49.224 1635 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - Not known whether passed class name [ru.divol13.pft.addressbook.model.GroupData] is safe
+19:41:49.225 1636 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ru.divol13.pft.addressbook.model.GroupData
+19:41:49.500 1911 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - Not known whether passed class name [ru.divol13.pft.addressbook.model.ContactData] is safe
+19:41:49.500 1911 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ru.divol13.pft.addressbook.model.ContactData
+19:41:49.528 1939 [main] DEBUG o.h.p.e.AbstractEntityPersister - Static SQL for entity: ru.divol13.pft.addressbook.model.GroupData
+19:41:49.528 1939 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Version select: select group_id from group_list where group_id =?
+19:41:49.528 1939 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Snapshot select: select groupdata_.group_id, groupdata_.group_footer as group_fo2_1_, groupdata_.group_header as group_he3_1_, groupdata_.group_name as group_na4_1_ from group_list groupdata_ where groupdata_.group_id=?
+19:41:49.528 1939 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Insert 0: insert into group_list (group_footer, group_header, group_name, group_id) values (?, ?, ?, ?)
+19:41:49.528 1939 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Update 0: update group_list set group_footer=?, group_header=?, group_name=? where group_id=?
+19:41:49.528 1939 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Delete 0: delete from group_list where group_id=?
+19:41:49.562 1973 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6a0659ac]
+19:41:49.564 1975 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : footer
+19:41:49.564 1975 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : header
+19:41:49.564 1975 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : name
+19:41:49.564 1975 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:41:49.578 1989 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+19:41:49.582 1993 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=ru.divol13.pft.addressbook.model.GroupData)
+    - Returns
+       - EntityReturnImpl(entity=ru.divol13.pft.addressbook.model.GroupData, querySpaceUid=<gen:0>, path=ru.divol13.pft.addressbook.model.GroupData)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=ru.divol13.pft.addressbook.model.GroupData)
+          - SQL table alias mapping - groupdata0_
+          - alias suffix - 0_
+          - suffixed key columns - {group_id1_1_0_}
+
+19:41:49.584 1995 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity ru.divol13.pft.addressbook.model.GroupData [NONE]: select groupdata0_.group_id as group_id1_1_0_, groupdata0_.group_footer as group_fo2_1_0_, groupdata0_.group_header as group_he3_1_0_, groupdata0_.group_name as group_na4_1_0_ from group_list groupdata0_ where groupdata0_.group_id=?
+19:41:49.584 1995 [main] DEBUG o.h.p.e.AbstractEntityPersister - Static SQL for entity: ru.divol13.pft.addressbook.model.ContactData
+19:41:49.584 1995 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Version select: select id from addressbook where id =?
+19:41:49.585 1996 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Snapshot select: select contactdat_.id, contactdat_.address as address2_0_, contactdat_.email as email3_0_, contactdat_.email2 as email4_0_, contactdat_.email3 as email5_0_, contactdat_.firstname as firstnam6_0_, contactdat_.home as home7_0_, contactdat_.lastname as lastname8_0_, contactdat_.middlename as middlena9_0_, contactdat_.mobile as mobile10_0_, contactdat_.photo as photo11_0_, contactdat_.work as work12_0_ from addressbook contactdat_ where contactdat_.id=?
+19:41:49.585 1996 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Insert 0: insert into addressbook (address, email, email2, email3, firstname, home, lastname, middlename, mobile, photo, work, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+19:41:49.585 1996 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Update 0: update addressbook set address=?, email=?, email2=?, email3=?, firstname=?, home=?, lastname=?, middlename=?, mobile=?, photo=?, work=? where id=?
+19:41:49.585 1996 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Delete 0: delete from addressbook where id=?
+19:41:49.585 1996 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4441d567]
+19:41:49.585 1996 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : address
+19:41:49.585 1996 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : email
+19:41:49.585 1996 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : email2
+19:41:49.585 1996 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : email3
+19:41:49.585 1996 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : firstname
+19:41:49.585 1996 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : home
+19:41:49.585 1996 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : lastname
+19:41:49.585 1996 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : middlename
+19:41:49.585 1996 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : mobile
+19:41:49.585 1996 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : photo
+19:41:49.585 1996 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : work
+19:41:49.585 1996 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+19:41:49.586 1997 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+19:41:49.586 1997 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=ru.divol13.pft.addressbook.model.ContactData)
+    - Returns
+       - EntityReturnImpl(entity=ru.divol13.pft.addressbook.model.ContactData, querySpaceUid=<gen:0>, path=ru.divol13.pft.addressbook.model.ContactData)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=ru.divol13.pft.addressbook.model.ContactData)
+          - SQL table alias mapping - contactdat0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+19:41:49.586 1997 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity ru.divol13.pft.addressbook.model.ContactData [NONE]: select contactdat0_.id as id1_0_0_, contactdat0_.address as address2_0_0_, contactdat0_.email as email3_0_0_, contactdat0_.email2 as email4_0_0_, contactdat0_.email3 as email5_0_0_, contactdat0_.firstname as firstnam6_0_0_, contactdat0_.home as home7_0_0_, contactdat0_.lastname as lastname8_0_0_, contactdat0_.middlename as middlena9_0_0_, contactdat0_.mobile as mobile10_0_0_, contactdat0_.photo as photo11_0_0_, contactdat0_.work as work12_0_0_ from addressbook contactdat0_ where contactdat0_.id=?
+19:41:49.640 2051 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@784c5ef5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+19:41:49.719 2130 [main] DEBUG o.h.e.t.j.p.i.JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+19:41:49.720 2131 [main] DEBUG o.h.e.t.j.p.i.JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+19:41:49.728 2139 [main] DEBUG o.h.e.t.j.p.i.StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:41:49.728 2139 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:41:49.729 2140 [main] DEBUG o.h.query.spi.NamedQueryRepository - Checking 0 named HQL queries
+19:41:49.729 2140 [main] DEBUG o.h.query.spi.NamedQueryRepository - Checking 0 named SQL queries
+19:41:49.734 2145 [main] DEBUG o.h.s.i.SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+19:41:49.740 2151 [main] DEBUG o.h.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@64355120
+19:41:49.742 2153 [main] DEBUG o.h.internal.SessionFactoryRegistry - Registering SessionFactory: ea32e989-0d1a-43bd-a694-b1357d1078fe (<unnamed>)
+19:41:49.742 2153 [main] DEBUG o.h.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+19:41:49.828 2239 [main] DEBUG o.h.s.internal.StatisticsInitiator - Statistics initialized [enabled=false]
+19:41:49.835 2246 [main] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+19:41:49.835 2246 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+19:41:49.850 2261 [main] DEBUG o.h.h.i.QueryTranslatorFactoryInitiator - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@61e7bf2f
+19:41:49.879 2290 [main] DEBUG o.h.h.i.ast.QueryTranslatorImpl - parse() - HQL: from ru.divol13.pft.addressbook.model.ContactData
+19:41:49.884 2295 [main] DEBUG o.h.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+19:41:49.890 2301 [main] DEBUG o.h.h.i.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       \-[FROM] Node: 'from'
+          \-[RANGE] Node: 'RANGE'
+             \-[DOT] Node: '.'
+                +-[DOT] Node: '.'
+                |  +-[DOT] Node: '.'
+                |  |  +-[DOT] Node: '.'
+                |  |  |  +-[DOT] Node: '.'
+                |  |  |  |  +-[IDENT] Node: 'ru'
+                |  |  |  |  \-[IDENT] Node: 'divol13'
+                |  |  |  \-[IDENT] Node: 'pft'
+                |  |  \-[IDENT] Node: 'addressbook'
+                |  \-[IDENT] Node: 'model'
+                \-[IDENT] Node: 'ContactData'
+
+19:41:49.917 2328 [main] DEBUG o.h.h.i.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+19:41:49.934 2345 [main] DEBUG o.h.h.internal.ast.tree.FromElement - FromClause{level=1} : ru.divol13.pft.addressbook.model.ContactData (<no alias>) -> contactdat0_
+19:41:49.934 2345 [main] DEBUG o.h.h.i.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+19:41:49.934 2345 [main] DEBUG o.h.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} addressbook contactdat0_ ) )
+19:41:49.940 2351 [main] DEBUG o.h.hql.internal.ast.HqlSqlWalker - Derived SELECT clause created.
+19:41:49.944 2355 [main] DEBUG o.h.h.i.ast.util.JoinProcessor - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity ContactData): [addressbook]
+    |  +-SelectExpressionImpl
+    |  | persister: SingleTableEntityPersister(ru.divol13.pft.addressbook.model.ContactData)
+    |  \-SqlFragment
+    \-FromClause
+       \-FromElement
+
+19:41:49.947 2358 [main] DEBUG o.h.h.i.ast.util.JoinProcessor - Using FROM fragment [addressbook contactdat0_]
+19:41:49.948 2359 [main] DEBUG o.h.h.i.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+19:41:49.948 2359 [main] DEBUG o.h.h.i.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (addressbook)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'contactdat0_.id as id1_0_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=addressbook,tableAlias=contactdat0_,origin=null,columns={,className=ru.divol13.pft.addressbook.model.ContactData}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'contactdat0_.address as address2_0_, contactdat0_.email as email3_0_, contactdat0_.email2 as email4_0_, contactdat0_.email3 as email5_0_, contactdat0_.firstname as firstnam6_0_, contactdat0_.home as home7_0_, contactdat0_.lastname as lastname8_0_, contactdat0_.middlename as middlena9_0_, contactdat0_.mobile as mobile10_0_, contactdat0_.photo as photo11_0_, contactdat0_.work as work12_0_'
+    \-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[contactdat0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'addressbook contactdat0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=addressbook,tableAlias=contactdat0_,origin=null,columns={,className=ru.divol13.pft.addressbook.model.ContactData}}
+
+19:41:49.948 2359 [main] DEBUG o.h.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+19:41:49.955 2366 [main] DEBUG o.h.h.i.ast.QueryTranslatorImpl - HQL: from ru.divol13.pft.addressbook.model.ContactData
+19:41:49.955 2366 [main] DEBUG o.h.h.i.ast.QueryTranslatorImpl - SQL: select contactdat0_.id as id1_0_, contactdat0_.address as address2_0_, contactdat0_.email as email3_0_, contactdat0_.email2 as email4_0_, contactdat0_.email3 as email5_0_, contactdat0_.firstname as firstnam6_0_, contactdat0_.home as home7_0_, contactdat0_.lastname as lastname8_0_, contactdat0_.middlename as middlena9_0_, contactdat0_.mobile as mobile10_0_, contactdat0_.photo as photo11_0_, contactdat0_.work as work12_0_ from addressbook contactdat0_
+19:41:49.955 2366 [main] DEBUG o.h.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+19:41:49.975 2386 [main] DEBUG org.hibernate.SQL - select contactdat0_.id as id1_0_, contactdat0_.address as address2_0_, contactdat0_.email as email3_0_, contactdat0_.email2 as email4_0_, contactdat0_.email3 as email5_0_, contactdat0_.firstname as firstnam6_0_, contactdat0_.home as home7_0_, contactdat0_.lastname as lastname8_0_, contactdat0_.middlename as middlena9_0_, contactdat0_.mobile as mobile10_0_, contactdat0_.photo as photo11_0_, contactdat0_.work as work12_0_ from addressbook contactdat0_
+19:41:49.998 2409 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+19:41:50.002 2413 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.divol13.pft.addressbook.model.ContactData#90]
+19:41:50.043 2454 [main] DEBUG org.hibernate.loader.Loader - Result set row: 1
+19:41:50.043 2454 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.divol13.pft.addressbook.model.ContactData#91]
+19:41:50.043 2454 [main] DEBUG org.hibernate.loader.Loader - Result set row: 2
+19:41:50.043 2454 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.divol13.pft.addressbook.model.ContactData#92]
+19:41:50.043 2454 [main] DEBUG org.hibernate.loader.Loader - Result set row: 3
+19:41:50.043 2454 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.divol13.pft.addressbook.model.ContactData#94]
+19:41:50.044 2455 [main] DEBUG org.hibernate.loader.Loader - Result set row: 4
+19:41:50.044 2455 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.divol13.pft.addressbook.model.ContactData#95]
+19:41:50.044 2455 [main] DEBUG org.hibernate.loader.Loader - Result set row: 5
+19:41:50.044 2455 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.divol13.pft.addressbook.model.ContactData#96]
+19:41:50.044 2455 [main] DEBUG org.hibernate.loader.Loader - Result set row: 6
+19:41:50.044 2455 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.divol13.pft.addressbook.model.ContactData#97]
+19:41:50.044 2455 [main] DEBUG org.hibernate.loader.Loader - Result set row: 7
+19:41:50.045 2456 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.divol13.pft.addressbook.model.ContactData#98]
+19:41:50.045 2456 [main] DEBUG org.hibernate.loader.Loader - Result set row: 8
+19:41:50.045 2456 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.divol13.pft.addressbook.model.ContactData#99]
+19:41:50.045 2456 [main] DEBUG org.hibernate.loader.Loader - Result set row: 9
+19:41:50.045 2456 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.divol13.pft.addressbook.model.ContactData#100]
+19:41:50.045 2456 [main] DEBUG org.hibernate.loader.Loader - Result set row: 10
+19:41:50.045 2456 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.divol13.pft.addressbook.model.ContactData#101]
+19:41:50.048 2459 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.divol13.pft.addressbook.model.ContactData#90]
+19:41:50.050 2461 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = address 0
+19:41:50.050 2461 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+19:41:50.050 2461 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = 
+19:41:50.050 2461 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+19:41:50.050 2461 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email2` : value = 
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email2`)  - enhanced for lazy-loading? - false
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email3` : value = 
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email3`)  - enhanced for lazy-loading? - false
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = first 0
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `home` : value = 120
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`home`)  - enhanced for lazy-loading? - false
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = last 0
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = middle 0
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `mobile` : value = 8(495)186-00-00
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`mobile`)  - enhanced for lazy-loading? - false
+19:41:50.051 2462 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `photo` : value = 
+19:41:50.052 2463 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`photo`)  - enhanced for lazy-loading? - false
+19:41:50.052 2463 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `work` : value = 916-000-00-11
+19:41:50.052 2463 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`work`)  - enhanced for lazy-loading? - false
+19:41:50.054 2465 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.divol13.pft.addressbook.model.ContactData#90]
+19:41:50.054 2465 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.divol13.pft.addressbook.model.ContactData#91]
+19:41:50.054 2465 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = address 1
+19:41:50.054 2465 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+19:41:50.054 2465 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = 
+19:41:50.054 2465 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+19:41:50.054 2465 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email2` : value = 
+19:41:50.054 2465 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email2`)  - enhanced for lazy-loading? - false
+19:41:50.054 2465 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email3` : value = 
+19:41:50.054 2465 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email3`)  - enhanced for lazy-loading? - false
+19:41:50.054 2465 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = first 1
+19:41:50.054 2465 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `home` : value = 121
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`home`)  - enhanced for lazy-loading? - false
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = last 1
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = middle 1
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `mobile` : value = 8(495)186-00-11
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`mobile`)  - enhanced for lazy-loading? - false
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `photo` : value = 
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`photo`)  - enhanced for lazy-loading? - false
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `work` : value = 916-111-00-11
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`work`)  - enhanced for lazy-loading? - false
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.divol13.pft.addressbook.model.ContactData#91]
+19:41:50.055 2466 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.divol13.pft.addressbook.model.ContactData#92]
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = address 0
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = 
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email2` : value = 
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email2`)  - enhanced for lazy-loading? - false
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email3` : value = 
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email3`)  - enhanced for lazy-loading? - false
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = first 0
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `home` : value = 120
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`home`)  - enhanced for lazy-loading? - false
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = last 0
+19:41:50.056 2467 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = middle 0
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `mobile` : value = 8(495)186-00-00
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`mobile`)  - enhanced for lazy-loading? - false
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `photo` : value = 
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`photo`)  - enhanced for lazy-loading? - false
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `work` : value = 916-000-00-11
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`work`)  - enhanced for lazy-loading? - false
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.divol13.pft.addressbook.model.ContactData#92]
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.divol13.pft.addressbook.model.ContactData#94]
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = Moscow
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = 
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+19:41:50.057 2468 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email2` : value = 
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email2`)  - enhanced for lazy-loading? - false
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email3` : value = 
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email3`)  - enhanced for lazy-loading? - false
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = Ivan
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `home` : value = 321-56
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`home`)  - enhanced for lazy-loading? - false
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = Ivanov
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = Ivanovich
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `mobile` : value = 916-159-95-19
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`mobile`)  - enhanced for lazy-loading? - false
+19:41:50.058 2469 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `photo` : value = 
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`photo`)  - enhanced for lazy-loading? - false
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `work` : value = 916-000-00-11
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`work`)  - enhanced for lazy-loading? - false
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.divol13.pft.addressbook.model.ContactData#94]
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.divol13.pft.addressbook.model.ContactData#95]
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = address 1
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = 
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email2` : value = 
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email2`)  - enhanced for lazy-loading? - false
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email3` : value = 
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email3`)  - enhanced for lazy-loading? - false
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = first 1
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `home` : value = 121
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`home`)  - enhanced for lazy-loading? - false
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = last 1
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+19:41:50.059 2470 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = middle 1
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `mobile` : value = 8(495)186-00-11
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`mobile`)  - enhanced for lazy-loading? - false
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `photo` : value = 
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`photo`)  - enhanced for lazy-loading? - false
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `work` : value = 916-111-00-11
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`work`)  - enhanced for lazy-loading? - false
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.divol13.pft.addressbook.model.ContactData#95]
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.divol13.pft.addressbook.model.ContactData#96]
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = address 0
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = 
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email2` : value = 
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email2`)  - enhanced for lazy-loading? - false
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email3` : value = 
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email3`)  - enhanced for lazy-loading? - false
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = first 0
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `home` : value = 120
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`home`)  - enhanced for lazy-loading? - false
+19:41:50.060 2471 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = last 0
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = middle 0
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `mobile` : value = 8(495)186-00-00
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`mobile`)  - enhanced for lazy-loading? - false
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `photo` : value = 
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`photo`)  - enhanced for lazy-loading? - false
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `work` : value = 916-000-00-11
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`work`)  - enhanced for lazy-loading? - false
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.divol13.pft.addressbook.model.ContactData#96]
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.divol13.pft.addressbook.model.ContactData#97]
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = address 1
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = 
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email2` : value = 
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email2`)  - enhanced for lazy-loading? - false
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email3` : value = 
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email3`)  - enhanced for lazy-loading? - false
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = first 1
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+19:41:50.061 2472 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `home` : value = 121
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`home`)  - enhanced for lazy-loading? - false
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = last 1
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = middle 1
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `mobile` : value = 8(495)186-00-11
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`mobile`)  - enhanced for lazy-loading? - false
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `photo` : value = 
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`photo`)  - enhanced for lazy-loading? - false
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `work` : value = 916-111-00-11
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`work`)  - enhanced for lazy-loading? - false
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.divol13.pft.addressbook.model.ContactData#97]
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.divol13.pft.addressbook.model.ContactData#98]
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = address 0
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = 
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email2` : value = 
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email2`)  - enhanced for lazy-loading? - false
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email3` : value = 
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email3`)  - enhanced for lazy-loading? - false
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = first 0
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `home` : value = 120
+19:41:50.062 2473 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`home`)  - enhanced for lazy-loading? - false
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = last 0
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = middle 0
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `mobile` : value = 8(495)186-00-00
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`mobile`)  - enhanced for lazy-loading? - false
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `photo` : value = 
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`photo`)  - enhanced for lazy-loading? - false
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `work` : value = 916-000-00-11
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`work`)  - enhanced for lazy-loading? - false
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.divol13.pft.addressbook.model.ContactData#98]
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.divol13.pft.addressbook.model.ContactData#99]
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = address 1
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = 
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email2` : value = 
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email2`)  - enhanced for lazy-loading? - false
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email3` : value = 
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email3`)  - enhanced for lazy-loading? - false
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = first 1
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `home` : value = 121
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`home`)  - enhanced for lazy-loading? - false
+19:41:50.063 2474 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = last 1
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = middle 1
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `mobile` : value = 8(495)186-00-11
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`mobile`)  - enhanced for lazy-loading? - false
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `photo` : value = 
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`photo`)  - enhanced for lazy-loading? - false
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `work` : value = 916-111-00-11
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`work`)  - enhanced for lazy-loading? - false
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.divol13.pft.addressbook.model.ContactData#99]
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.divol13.pft.addressbook.model.ContactData#100]
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = address 0
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = 
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email2` : value = 
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email2`)  - enhanced for lazy-loading? - false
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email3` : value = 
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email3`)  - enhanced for lazy-loading? - false
+19:41:50.064 2475 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = first 0
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `home` : value = 120
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`home`)  - enhanced for lazy-loading? - false
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = last 0
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = middle 0
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `mobile` : value = 8(495)186-00-00
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`mobile`)  - enhanced for lazy-loading? - false
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `photo` : value = 
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`photo`)  - enhanced for lazy-loading? - false
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `work` : value = 916-000-00-11
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`work`)  - enhanced for lazy-loading? - false
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.divol13.pft.addressbook.model.ContactData#100]
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.divol13.pft.addressbook.model.ContactData#101]
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `address` : value = address 1
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`address`)  - enhanced for lazy-loading? - false
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email` : value = 
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email2` : value = 
+19:41:50.065 2476 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email2`)  - enhanced for lazy-loading? - false
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `email3` : value = 
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`email3`)  - enhanced for lazy-loading? - false
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = first 1
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `home` : value = 121
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`home`)  - enhanced for lazy-loading? - false
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = last 1
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = middle 1
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `mobile` : value = 8(495)186-00-11
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`mobile`)  - enhanced for lazy-loading? - false
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `photo` : value = 
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`photo`)  - enhanced for lazy-loading? - false
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `work` : value = 916-111-00-11
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`work`)  - enhanced for lazy-loading? - false
+19:41:50.066 2477 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.divol13.pft.addressbook.model.ContactData#101]
+19:41:50.070 2481 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+19:41:50.070 2481 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+19:41:50.078 2489 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+19:41:50.086 2497 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 11 objects
+19:41:50.086 2497 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+19:41:50.089 2500 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+19:41:50.089 2500 [main] DEBUG o.h.internal.util.EntityPrinter - ru.divol13.pft.addressbook.model.ContactData{email3=, email2=, firstname=first 1, address=address 1, work=916-111-00-11, mobile=8(495)186-00-11, middlename=middle 1, photo=, id=99, email=, home=121, lastname=last 1}
+19:41:50.089 2500 [main] DEBUG o.h.internal.util.EntityPrinter - ru.divol13.pft.addressbook.model.ContactData{email3=, email2=, firstname=first 0, address=address 0, work=916-000-00-11, mobile=8(495)186-00-00, middlename=middle 0, photo=, id=98, email=, home=120, lastname=last 0}
+19:41:50.089 2500 [main] DEBUG o.h.internal.util.EntityPrinter - ru.divol13.pft.addressbook.model.ContactData{email3=, email2=, firstname=first 1, address=address 1, work=916-111-00-11, mobile=8(495)186-00-11, middlename=middle 1, photo=, id=97, email=, home=121, lastname=last 1}
+19:41:50.090 2501 [main] DEBUG o.h.internal.util.EntityPrinter - ru.divol13.pft.addressbook.model.ContactData{email3=, email2=, firstname=first 0, address=address 0, work=916-000-00-11, mobile=8(495)186-00-00, middlename=middle 0, photo=, id=96, email=, home=120, lastname=last 0}
+19:41:50.090 2501 [main] DEBUG o.h.internal.util.EntityPrinter - ru.divol13.pft.addressbook.model.ContactData{email3=, email2=, firstname=first 1, address=address 1, work=916-111-00-11, mobile=8(495)186-00-11, middlename=middle 1, photo=, id=101, email=, home=121, lastname=last 1}
+19:41:50.090 2501 [main] DEBUG o.h.internal.util.EntityPrinter - ru.divol13.pft.addressbook.model.ContactData{email3=, email2=, firstname=first 0, address=address 0, work=916-000-00-11, mobile=8(495)186-00-00, middlename=middle 0, photo=, id=100, email=, home=120, lastname=last 0}
+19:41:50.090 2501 [main] DEBUG o.h.internal.util.EntityPrinter - ru.divol13.pft.addressbook.model.ContactData{email3=, email2=, firstname=first 1, address=address 1, work=916-111-00-11, mobile=8(495)186-00-11, middlename=middle 1, photo=, id=91, email=, home=121, lastname=last 1}
+19:41:50.090 2501 [main] DEBUG o.h.internal.util.EntityPrinter - ru.divol13.pft.addressbook.model.ContactData{email3=, email2=, firstname=first 0, address=address 0, work=916-000-00-11, mobile=8(495)186-00-00, middlename=middle 0, photo=, id=90, email=, home=120, lastname=last 0}
+19:41:50.090 2501 [main] DEBUG o.h.internal.util.EntityPrinter - ru.divol13.pft.addressbook.model.ContactData{email3=, email2=, firstname=first 1, address=address 1, work=916-111-00-11, mobile=8(495)186-00-11, middlename=middle 1, photo=, id=95, email=, home=121, lastname=last 1}
+19:41:50.091 2502 [main] DEBUG o.h.internal.util.EntityPrinter - ru.divol13.pft.addressbook.model.ContactData{email3=, email2=, firstname=Ivan, address=Moscow, work=916-000-00-11, mobile=916-159-95-19, middlename=Ivanovich, photo=, id=94, email=, home=321-56, lastname=Ivanov}
+19:41:50.091 2502 [main] DEBUG o.h.internal.util.EntityPrinter - ru.divol13.pft.addressbook.model.ContactData{email3=, email2=, firstname=first 0, address=address 0, work=916-000-00-11, mobile=8(495)186-00-00, middlename=middle 0, photo=, id=92, email=, home=120, lastname=last 0}
+19:41:50.094 2505 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+19:41:50.094 2505 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
