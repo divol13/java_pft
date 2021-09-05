@@ -1,11 +1,23 @@
 package ru.divol13.pft.addressbook.model;
 
+import com.google.gson.annotations.Expose;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
+
 import java.util.Objects;
 
+@XStreamAlias("group")
 public class GroupData {
+    @XStreamOmitField
     private int id;
+
+    @Expose
     private String name;
+
+    @Expose
     private String header;
+
+    @Expose
     private String footer;
 
     public GroupData withId(int id) {
@@ -27,21 +39,7 @@ public class GroupData {
         this.footer = footer;
         return this;
     }
-/*
-    public GroupData(int id, String name, String header, String footer) {
-        this.id = id;
-        this.name = name;
-        this.header = header;
-        this.footer = footer;
-    }
 
-    public GroupData(String name, String header, String footer) {
-        this.id = 0;
-        this.name = name;
-        this.header = header;
-        this.footer = footer;
-    }
-*/
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -11,4 +11,10 @@ dependencies {
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0-beta-4'
     // https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all
     testImplementation 'org.hamcrest:hamcrest-all:1.3'
+    // https://mvnrepository.com/artifact/com.beust/jcommander
+    implementation 'com.beust:jcommander:1.48'
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation 'com.google.code.gson:gson:2.8.8'
+    // https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream
+    implementation 'com.thoughtworks.xstream:xstream:1.4.18'
 }
