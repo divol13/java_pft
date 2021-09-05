@@ -1,25 +1,49 @@
 package ru.divol13.pft.addressbook.model;
 
+import com.google.gson.annotations.Expose;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
+
+import java.io.File;
 import java.util.Objects;
 
+@XStreamAlias("contact")
 public class ContactData {
+    @XStreamOmitField
     private int id;
+
+    @Expose
     private String firstname;
+
+    @Expose
     private String middlename;
+
+    @Expose
     private String lastname;
+
+    @Expose
     private String address;
+
+    @Expose
     private String home;
+
+    @Expose
     private String mobile;
-    private String group;
+
+    @Expose
     private String work;
+
+    private String group;
     private String allphones;
     private String allemails;
     private String email;
     private String email2;
     private String email3;
+    private File photo;
 
-    public String getAllPhones() {
-        return this.allphones;
+    public ContactData withPhoto(File photo) {
+        this.photo = photo;
+        return this;
     }
 
     public ContactData withAllPhones(String allphones) {
@@ -92,6 +116,10 @@ public class ContactData {
         return this;
     }
 
+    public File getPhoto() {
+        return photo;
+    }
+
     public String getFirstname() {
         return firstname;
     }
@@ -118,6 +146,10 @@ public class ContactData {
 
     public String getMobilePhone() {
         return mobile;
+    }
+
+    public String getAllPhones() {
+        return this.allphones;
     }
 
     public String getGroup() {

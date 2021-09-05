@@ -1,0 +1,47 @@
+<list>
+  <contact>
+    <firstname>first 0</firstname>
+    <middlename>middle 0</middlename>
+    <lastname>last 0</lastname>
+    <address>address 0</address>
+    <home>120</home>
+    <mobile>8(495)186-00-00</mobile>
+    <work>916-000-00-11</work>
+  </contact>
+  <contact>
+    <firstname>first 1</firstname>
+    <middlename>middle 1</middlename>
+    <lastname>last 1</lastname>
+    <address>address 1</address>
+    <home>121</home>
+    <mobile>8(495)186-00-11</mobile>
+    <work>916-111-00-11</work>
+  </contact>
+  <contact>
+    <firstname>first 2</firstname>
+    <middlename>middle 2</middlename>
+    <lastname>last 2</lastname>
+    <address>address 2</address>
+    <home>122</home>
+    <mobile>8(495)186-00-22</mobile>
+    <work>916-222-00-11</work>
+  </contact>
+  <contact>
+    <firstname>first 3</firstname>
+    <middlename>middle 3</middlename>
+    <lastname>last 3</lastname>
+    <address>address 3</address>
+    <home>123</home>
+    <mobile>8(495)186-00-33</mobile>
+    <work>916-333-00-11</work>
+  </contact>
+  <contact>
+    <firstname>first 4</firstname>
+    <middlename>middle 4</middlename>
+    <lastname>last 4</lastname>
+    <address>address 4</address>
+    <home>124</home>
+    <mobile>8(495)186-00-44</mobile>
+    <work>916-444-00-11</work>
+  </contact>
+</list>
