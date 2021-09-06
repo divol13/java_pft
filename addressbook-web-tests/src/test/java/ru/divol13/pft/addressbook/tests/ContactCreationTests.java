@@ -60,6 +60,8 @@ public class ContactCreationTests extends TestBase {
                     contact.withId(after.stream().max(Comparator.comparingInt(ContactData::getId)).get().getId())
             ))
     );
+
+    verifyContactListInUI();
   }
 
 }

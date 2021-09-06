@@ -74,6 +74,8 @@ public class GroupCreationTests extends TestBase {
 
     Groups after = app.db().groups();
     assertThat(after, equalTo (before));
+
+    verifyGroupListInUI();
   }
 
 }
