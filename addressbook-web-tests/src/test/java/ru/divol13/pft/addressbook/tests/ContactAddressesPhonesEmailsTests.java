@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class ContactEmailsTests extends TestBase{
+public class ContactAddressesPhonesEmailsTests extends TestBase{
     @BeforeMethod
     public void ensurePreconditions() {
         app.contact().gotoHomePage();
@@ -19,6 +19,7 @@ public class ContactEmailsTests extends TestBase{
                     withFirstname("Иван").
                     withMiddlename("Модестович").
                     withLastname("Рабинович").
+                    withAddress("г.Долгопрудный, улица Сезам, дом 9").
                     withEmail("imr@mail.ru").
                     withEmail2("ivan.rab@mail.ru").
                     withEmail3("rab_ivan_mod@gmail.com").
@@ -34,15 +35,23 @@ public class ContactEmailsTests extends TestBase{
         ContactData contact = app.contact().all().iterator().next();
         ContactData contactInfoFromEditForm = app.contact().infoFromEditForm(contact);
         assertThat(contact.getAllEmails(), equalTo(mergeEmails(contactInfoFromEditForm)));
-
-    }
+        assertThat(contact.getAllPhones(), equalTo(mergePhones(contactInfoFromEditForm)));
+        assertThat(contact.getAddress(), equalTo(contactInfoFromEditForm.getAddress()));
+     }
 
     private String mergeEmails(ContactData contact) {
         return Arrays.asList(contact.getEmail(), contact.getEmail2(), contact.getEmail3())
                 .stream().filter((s -> !s.equals("")))
-                .map(ContactEmailsTests::cleaner)
+                .map(ContactAddressesPhonesEmailsTests::cleaner)
                 .collect(Collectors.joining("\n"));
 
+    }
+
+    private String mergePhones(ContactData contact) {
+        return Arrays.asList(contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone())
+                .stream().filter((s) -> !s.equals(""))
+                .map(ContactPhonesTests::cleaner)
+                .collect(Collectors.joining("\n"));
     }
 
     public static String cleaner(String email) {

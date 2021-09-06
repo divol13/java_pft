@@ -14,7 +14,7 @@ public class ContactPhonesTests extends TestBase {
     @BeforeMethod
     public void ensurePreconditions() {
         app.contact().gotoHomePage();
-        if (app.contact().all().size() == 0) {
+        if (app.db().contacts().size() == 0) {
             app.contact().create(
                 new ContactData().
                     withFirstname("Dracula").
@@ -28,7 +28,7 @@ public class ContactPhonesTests extends TestBase {
         }
     }
 
-    @Test
+    @Test (enabled = false)
     public void testContactPhones(){
         app.contact().gotoHomePage();
         ContactData contact = app.contact().all().iterator().next();

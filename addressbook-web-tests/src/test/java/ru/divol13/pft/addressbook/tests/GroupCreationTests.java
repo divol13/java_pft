@@ -23,9 +23,6 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class GroupCreationTests extends TestBase {
-
-  Logger logger = LoggerFactory.getLogger(GroupCreationTests.class);
-
   @DataProvider
   public Iterator<Object[]> validGroupsFromJson() throws IOException {
     try(BufferedReader reader = new BufferedReader(
@@ -43,8 +40,7 @@ public class GroupCreationTests extends TestBase {
       }
 
       Gson gson = new Gson();
-      List<GroupData> groups = gson.fromJson(json, new TypeToken<List<GroupData>>() {
-      }.getType());
+      List<GroupData> groups = gson.fromJson(json, new TypeToken<List<GroupData>>() { }.getType());
       return groups.stream().
               map((g) -> new Object[]{g}).
               collect(Collectors.toList()).
@@ -56,13 +52,12 @@ public class GroupCreationTests extends TestBase {
   public void testGroupCreation(GroupData group) throws Exception {
     app.goTo().groupPage();
 
-    Groups before = app.group().all();
-    //GroupData group = new GroupData().withName("test1").withHeader("test2").withFooter("test3");
+    Groups before = app.db().groups();
 
     app.group().create(group);
-    assertThat(app.group().count(), equalTo(before.size() + 1));
+    assertThat(app.db().groups().size(), equalTo(before.size() + 1));
 
-    Groups after = app.group().all();
+    Groups after = app.db().groups();
     assertThat(after, equalTo(
             before.withAdded( group.withId( after.stream().max(Comparator.comparingInt(GroupData::getId)).get().getId()) )
     ));
@@ -71,13 +66,13 @@ public class GroupCreationTests extends TestBase {
   @Test (enabled = false)
   public void testBadGroupCreation() {
     app.goTo().groupPage();
-    Groups before = app.group().all();
+    Groups before = app.db().groups();
 
     GroupData group = new GroupData().withName("test5'");
     app.group().create(group);
     assertThat(app.group().count(), equalTo(before.size()));
 
-    Groups after = app.group().all();
+    Groups after = app.db().groups();
     assertThat(after, equalTo (before));
   }
 

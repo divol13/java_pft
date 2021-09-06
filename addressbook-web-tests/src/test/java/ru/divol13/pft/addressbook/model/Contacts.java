@@ -2,6 +2,7 @@ package ru.divol13.pft.addressbook.model;
 import com.google.common.collect.ForwardingSet;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Contacts extends ForwardingSet<ContactData> {
@@ -14,6 +15,10 @@ public class Contacts extends ForwardingSet<ContactData> {
 
     public Contacts() {
         this.delegate = new HashSet<>();
+    }
+
+    public Contacts(List<ContactData> contacts) {
+        this.delegate = new HashSet<ContactData>(contacts);
     }
 
     @Override
