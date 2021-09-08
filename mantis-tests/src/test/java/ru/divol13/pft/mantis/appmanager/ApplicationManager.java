@@ -20,6 +20,7 @@ public class ApplicationManager {
     private RegistrationHelper registrationHelper;
     private UserHelper users;
     private DbHelper dbHelper;
+    private SoapHelper soapHelper;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -85,5 +86,12 @@ public class ApplicationManager {
         }
         return registrationHelper;
     }
+
+    public SoapHelper soap() {
+        if (soapHelper == null) {
+            soapHelper = new SoapHelper(this);
+        }
+        return soapHelper;
+    }  
 
 }

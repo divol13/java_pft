@@ -25,6 +25,8 @@ dependencies {
     implementation 'mysql:mysql-connector-java:8.0.26'
     // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
     implementation 'org.hibernate:hibernate-core:5.5.7.Final'
+    // https://mvnrepository.com/artifact/biz.futureware.mantis/mantis-axis-soap-client
+    implementation 'biz.futureware.mantis:mantis-axis-soap-client:1.2.19'
 }
 
 test {
