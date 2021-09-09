@@ -202,4 +202,26 @@ public class ContactHelper extends HelperBase {
                         withEmail3(email3);
     }
 
+    public void selectGroupById(int id) {
+        Select select = new Select(wd.findElement(By.name("to_group")));
+        select.selectByValue(String.valueOf(id));
+    }
+
+    public void selectGroupFilterById(int id) {
+        Select select = new Select(wd.findElement(By.name("group")));
+        select.selectByValue(String.valueOf(id));
+    }
+
+    public void selectGroupFilterToNone() {
+        Select select = new Select(wd.findElement(By.name("group")));
+        select.selectByValue("[none]");
+    }
+
+    public void submitDeleteFromGroup() {
+        click(By.name("remove"));
+    }
+
+    public void submitAddContactToGroup() {
+        click(By.name("add"));
+    }
 }
