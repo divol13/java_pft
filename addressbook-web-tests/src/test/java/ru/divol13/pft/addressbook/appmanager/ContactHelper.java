@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.divol13.pft.addressbook.model.ContactData;
 import ru.divol13.pft.addressbook.model.Contacts;
+import ru.divol13.pft.addressbook.model.GroupData;
 import ru.divol13.pft.addressbook.tests.HelperBase;
 import java.util.List;
 
@@ -137,8 +138,11 @@ public class ContactHelper extends HelperBase {
     }
 
     public void selectContactById(int id) {
-        String selector = "input[value='" + id + "']";
-        wd.findElement(By.cssSelector(selector)).click();
+        //String selector = "input[value='" + id + "']";
+        //wd.findElement(By.cssSelector(selector)).click();
+
+        String selector = String.format("//input[@id=%s]", id);
+        wd.findElement(By.xpath(selector)).click();
     }
 
     public void delete(ContactData contact) throws InterruptedException {
@@ -223,5 +227,31 @@ public class ContactHelper extends HelperBase {
 
     public void submitAddContactToGroup() {
         click(By.name("add"));
+    }
+
+
+    public void addContactToGroup(ContactData contact, GroupData group) {
+        // топаем на домашнюю
+        gotoHomePage();
+
+        // без этого не работает добавление в группу - возможно баг в системе
+        selectGroupFilterToNone();
+
+        // линкуем контакт и группу
+        selectContactById(contact.getId());
+        selectGroupById(group.getId());
+        submitAddContactToGroup();
+
+        // топаем на домашнюю
+        gotoHomePage();
+    }
+
+    public void deleteContactFromGroup(ContactData contact, GroupData group) {
+        // топаем на домашнюю
+        gotoHomePage();
+
+        selectGroupFilterById(group.getId());
+        selectContactById(contact.getId());
+        submitDeleteFromGroup();
     }
 }

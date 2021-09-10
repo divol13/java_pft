@@ -3,16 +3,13 @@ package ru.divol13.pft.addressbook.tests;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import ru.divol13.pft.addressbook.model.ContactData;
-import ru.divol13.pft.addressbook.model.Contacts;
 import ru.divol13.pft.addressbook.model.GroupData;
 import ru.divol13.pft.addressbook.model.Groups;
-
-import javax.transaction.Transactional;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class ContactAddToGroup extends TestBase {
+public class ContactDeleteFromGroup extends TestBase{
     @BeforeTest
     private void ensurePreconditions() {
         if(app.db().groups().size() == 0){
@@ -55,37 +52,43 @@ public class ContactAddToGroup extends TestBase {
     }
 
     @Test
-    public void testAddContactToGroup(){
-        // берем любой контакт не привязанный к группе
-        ContactData contact = app.db().contacts().stream().filter( c -> c.getGroups().size() == 0 ).findAny().orElse(null);
+    public void testDeleteContractFromGroup(){
+        // берем любой контакт привязанный к группе
+        ContactData contact = app.db().contacts().stream().filter( c -> c.getGroups().size() !=0 ).findAny().orElse(null);;
+        GroupData group = null;
 
-        // если контакт не нашли
-        if(contact == null){
+        // если контакт с группой есть
+        if(contact != null){
 
-            // то создаем сами
+            // достаем группу
+            group = contact.getGroups().stream().findFirst().get();
+
+        } else { // если не нашли контакт с группой
+
+            // создаем контакт сами
             contact = createNewContact();
-        }
 
-        // берем любую группу, в которой нет контактов
-        GroupData group = app.db().groups().stream().filter(g->g.getContacts().size() == 0).findAny().orElse(null);
+            // берем любую группу, в которой нет контактов
+            group = app.db().groups().stream().filter(g->g.getContacts().size() == 0).findAny().orElse(null);;
 
-        // если группу не нашли
-        if(group == null){
+            // если нет пустой группы, то мы ее создадим
+            if(group == null){
+                group = createNewGroup();
+            }
 
-            // то создаем сами
-            group = createNewGroup();
+            // линкуем контакт с группой, чтобы было что удалять
+            app.contact().addContactToGroup(contact, group);
         }
 
         // запоминаем в какую группу контакт был включен
         Groups before = new Groups(contact.getGroups());
         int contactId = contact.getId();
 
-        // добавляем контакт в группу
-        app.contact().addContactToGroup(contact,group);
+        // удаляем контакт из группы
+        app.contact().deleteContactFromGroup(contact, group);
 
         // checks
         Groups after = new Groups(app.db().contacts().stream().filter(c -> c.getId() == contactId).findFirst().get().getGroups());
-        assertThat(after, equalTo(before.withAdded(group)));
+        assertThat(after, equalTo(before.without(group)));
     }
 }
-
